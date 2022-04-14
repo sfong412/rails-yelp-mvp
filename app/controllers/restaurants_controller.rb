@@ -13,11 +13,12 @@ class RestaurantsController < ApplicationController
   end
 
   def new
-    @restaurant = Restaurant.new(params[:id])
+    @restaurant = Restaurant.new(params[:restaurant])
   end
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    @review = Review.new(params[:review])
   end
 
   private

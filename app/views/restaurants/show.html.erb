@@ -1,4 +1,9 @@
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.address %></p>
+<p><%= "Phone: #{@restaurant.phone_number}" %></p>
+<p><%= "Category: #{@restaurant.category.capitalize}" %></p>
+
 <ul>
-<li><%= link_to "Write a review on #{@restaurant.name}", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%></li>
-<li><%= link_to "Back to restaurants page", restaurants_path, class: "btn btn-primary"%></li>
+  <%= render template: "reviews/new" %>
+  <li><%= link_to "Back to restaurants page", restaurants_path, class: "btn btn-primary"%></li>
 </ul>
